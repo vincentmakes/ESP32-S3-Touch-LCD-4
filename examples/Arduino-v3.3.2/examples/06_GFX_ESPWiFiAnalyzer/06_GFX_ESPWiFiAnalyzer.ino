@@ -39,6 +39,11 @@ void setup() {
   Wire.begin(15, 7);
 
   Wire.beginTransmission(0x24);
+  Wire.write(0x02);
+  Wire.write(0xff);
+  Wire.endTransmission();
+
+  Wire.beginTransmission(0x24);
   Wire.write(0x03);
   Wire.write(0x3a);
   Wire.endTransmission();
